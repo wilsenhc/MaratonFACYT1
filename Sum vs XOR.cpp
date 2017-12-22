@@ -7,28 +7,15 @@ int main() {
     long result = 0;
     long ab = 0;
     cin >> n;
-    if (n > 100)
+    cout.precision(100);
+    while (n != 0)
     {
-        while (n != 0)
+        if ((n & 1) == 0)
         {
-            if ((n & 1) == 0)
-            {
-                result++;
-            }
-            n = n >> 1;
+            result++;
         }
-        cout << pow(2, result) << endl;
+        n = n >> 1;
     }
-    else
-    {
-        m = n;
-        for (long i = 0; i <= n; i++, m++)
-        {
-            ab = n^i;
-            if (m == ab)
-                result++;
-        }
-        cout << result << endl;
-    }
+    cout << pow(2, result) << endl;
     return 0;
 }
