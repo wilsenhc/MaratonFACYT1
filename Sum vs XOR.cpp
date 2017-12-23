@@ -3,9 +3,8 @@
 using namespace std;
 
 int main() {
-    long n, m;
+    long n;
     long result = 0;
-    long ab = 0;
     cin >> n;
     cout.precision(100);
     while (n != 0)
